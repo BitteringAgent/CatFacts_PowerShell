@@ -1,7 +1,11 @@
 ﻿<#
 6/13/2017
+
 Phone sms lookup - http://www.freecarrierlookup.com/
+
+3/2021 Test shit
 #>
+
 $encryptedSecret = get-content "C:\temp\secret.txt"
 $key = get-content "c:\temp\key.txt"
 $ss = ConvertTo-SecureString -Key ([Convert]::FromBase64String($key)) -String $encryptedSecret
