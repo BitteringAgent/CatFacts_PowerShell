@@ -6,10 +6,11 @@ Phone sms lookup - http://www.freecarrierlookup.com/
 3/2021 Test shit
 #>
 
+$Email = 'INPUTYOUREMAILHERE'
 $encryptedSecret = get-content "C:\temp\secret.txt"
 $key = get-content "c:\temp\key.txt"
 $ss = ConvertTo-SecureString -Key ([Convert]::FromBase64String($key)) -String $encryptedSecret
-$cred = (New-Object System.Management.Automation.PSCredential 'anoncatfacts@gmail.com',$ss)
+$cred = (New-Object System.Management.Automation.PSCredential $Email,$ss)
 <#
 # load rss-feed
 Function Get-Gmailbox {$webclient = new-object System.Net.WebClient
